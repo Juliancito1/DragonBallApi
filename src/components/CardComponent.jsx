@@ -10,7 +10,7 @@ const CardComponent = () => {
   useEffect(() => {
     const fetchPersonajes = async () => {
       const personajesData = await obtenerPersonajes();
-      setPersonajes(personajesData); // Asigna los personajes obtenidos a tu estado
+      setPersonajes(personajesData);
     };
 
     fetchPersonajes()
