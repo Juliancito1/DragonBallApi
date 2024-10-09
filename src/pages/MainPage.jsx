@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const MainPage = () => {
   return (
-    <div>
+    <section className="mainSection">
       <h1>Hola</h1>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default MainPage
+export default MainPage;
