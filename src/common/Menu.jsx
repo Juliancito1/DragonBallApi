@@ -1,7 +1,7 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
 
 
-const Navbar = () => {
+const Menu = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -18,4 +18,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar
+export default Menu
