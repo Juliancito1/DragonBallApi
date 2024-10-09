@@ -44,3 +44,13 @@ footer{
   color: #0D47A1;
   transition: 1s;
 }
+
+.imgPersonaje{
+  height: 400px;
+  object-fit: contain;
+}
+
+.imgPersonaje:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}

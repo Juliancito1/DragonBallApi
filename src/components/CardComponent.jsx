@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Row, Button, Col } from 'react-bootstrap'
+import { obtenerPersonajes } from '../helpers/peticionApi'
+import ItemPersonaje from './ItemPersonaje'
 
 const CardComponent = () => {
+
+  const [personajes, setPersonajes] = useState([])
+
+  useEffect(() => {
+    const fetchPersonajes = async () => {
+      const personajesData = await obtenerPersonajes();
+      setPersonajes(personajesData); // Asigna los personajes obtenidos a tu estado
+    };
+
+    fetchPersonajes()
+  }, [])
+  
+
   return (
     <Row>
-      <Col lg={3}>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-      </Col>
+      {personajes.length > 0 ? personajes.map((personaje) => <ItemPersonaje personaje={personaje} key={personaje.id}/>) : <></>}
     </Row>
   );
 }
