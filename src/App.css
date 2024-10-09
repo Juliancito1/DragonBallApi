@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 #root{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Bangers', sans-serif;
 }
 
 .mainSection{
@@ -9,6 +11,35 @@
 }
 
 .logo{
-  height: 70px;
+  height: 80px;
   object-fit: cover;
+}
+
+.navbar{
+   background-color: #F57C00;
+   color: white;
+}
+
+.nav-link{
+  font-size: 25px;
+}
+.nav-link:hover{
+  background-color: #0D47A1;
+  transition: 1s;
+}
+
+footer{
+  background-color: #0D47A1;
+  color: #ffff;
+}
+
+.linkApi{
+  text-decoration: none;
+  color: #F57C00;
+}
+
+.linkApi:hover{
+  background-color: #FFD700;
+  color: #0D47A1;
+  transition: 1s;
 }
