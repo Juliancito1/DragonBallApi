@@ -1,9 +1,13 @@
 import React from "react";
+import CardComponent from "../components/CardComponent";
 
 const MainPage = () => {
   return (
     <section className="mainSection">
-      <h1>Hola</h1>
+      <div className="container">
+        <h1 className="text-center my-5">Bienvenido al Mundo de Dragon Ball</h1>
+        <CardComponent />
+      </div>
     </section>
   );
 };
