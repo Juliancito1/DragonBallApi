@@ -1,56 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-#root{
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Bangers', sans-serif;
+  font-family: "Bangers", sans-serif;
 }
 
-.mainSection{
+body {
+  --sb-track-color: #000;
+  --sb-thumb-color: #ffd700;
+  --sb-size: 13px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+}
+
+.mainSection {
   flex-grow: 1;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
-.logo{
+.logo {
   height: 80px;
   object-fit: cover;
 }
 
-.navbar{
-   background-color: #F57C00;
-   color: white;
+.navbar {
+  background-color: #f57c00;
+  color: white;
 }
 
-.nav-link{
+.nav-link {
   font-size: 25px;
 }
-.nav-link:hover{
-  background-color: #0D47A1;
+.nav-link:hover {
+  background-color: #0d47a1;
   transition: 1s;
 }
 
-footer{
-  background-color: #0D47A1;
+footer {
+  background-color: #0d47a1;
   color: #ffff;
 }
 
-.linkApi{
+.linkApi {
   text-decoration: none;
-  color: #F57C00;
+  color: #f57c00;
 }
 
-.linkApi:hover{
-  background-color: #FFD700;
-  color: #0D47A1;
+.linkApi:hover {
+  background-color: #ffd700;
+  color: #0d47a1;
   transition: 1s;
 }
 
-.imgPersonaje{
-  height: 400px;
+.imgPersonaje {
+  height: 250px;
   object-fit: contain;
 }
 
-.imgPersonaje:hover{
+.imgPersonaje:hover {
   transform: scale(1.1);
   transition: 1s;
+}
+
+.cardFondo {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 2;
+}
+
+.imgEsfera {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mainSection {
+    background-image: url(./img/Fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cardFondo {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 2;
+  }
+
+  .imgEsfera {
+    width: 230px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
+  .imgPersonaje {
+    height: 200px;
+    object-fit: contain;
+  }
 }
