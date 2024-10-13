@@ -88,14 +88,6 @@ footer {
   height: auto;
   display: block;
 }
-
-@media (max-width: 767px)
-{
-  .mainSection{
-      background-color: #f5f5f5;
-  }
-}
-
 @media (min-width: 768px) {
   .mainSection {
     background-image: url(./img/Fondo.png);
@@ -103,8 +95,28 @@ footer {
     background-size: cover;
     background-position: center;
   }
+  .imgDetail {
+    height: 600px;
+    object-fit: cover;
+  }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+
+@media (max-width: 767px) {
+  .mainSection {
+    background-color: #f5f5f5;
+  }
+  .imgDetail {
+  height: 500px;
+  object-fit: cover;
+}
+.imgTransformation{
+  height: 250px;
+  object-fit: cover;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
   .cardFondo {
     border: none;
     position: absolute;
@@ -113,6 +125,11 @@ footer {
     transform: translate(-50%, -50%);
     width: 260px;
     z-index: 2;
+  }
+
+  .imgDetail {
+    height: 500px;
+    object-fit: cover;
   }
 
   .imgEsfera {
@@ -125,10 +142,33 @@ footer {
     height: 200px;
     object-fit: contain;
   }
+
+  .imgTransformation{
+    height: 300px;
+  object-fit: cover;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .imgTransformation{
+  height: 300px;
+  object-fit: cover;
+}
+}
+
+.bgDetailPage {
+  background-image: url(./img/Fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
-.imgDetail{
-  height: 500px;
-  object-fit: cover;
+.bgDetail {
+  background-color: #ffffff6c;
+}
+
+.bgTransformacion{
+  background-color: #ff880056;
 }

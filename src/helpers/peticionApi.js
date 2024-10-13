@@ -17,6 +17,7 @@ export const obtenerPersonaje = async (id) => {
     const respuesta = await axios.get(
       `https://dragonball-api.com/api/characters/${id}`
     );
+    console.log(respuesta.data)
     return respuesta.data;
   } catch (error) {
     console.error(error);
